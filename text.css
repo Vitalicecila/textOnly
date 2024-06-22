@@ -1,0 +1,50 @@
+html, body {
+    margin:0;
+    padding:0;
+    background-color: #ffffff;
+  }
+  .blurContainer.blur {
+    filter: blur(5px);
+  
+  }
+  #pretest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #postest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  iframe {
+  margin-top:4%;
+    border: none;
+    width: 150%;
+  }
+  .popup {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  padding: 10%;
+  background: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px -5p rgba(0,0,0,0.1);
+  }
+  
+  .hidden {
+  display: none;
+  }
+  
+  .main {
+    display:flex;
+    flex-wrap:wrap;
+    font-family:'Comic Sans', cursive;
+    font-size: 78%;
+    padding:1vmin;
+  }
+  
+ 
