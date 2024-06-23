@@ -10,8 +10,9 @@
 
 <body>
   <div class="blurContainer">
+    <h1>FLIGHT</h1>
+    <h2>by Doris Lessing</h2>
     <article class="text">
-    <h1>Flight</h1>
     <p> Above the old man's head was the dovecote, a tall wire-netted shelf on stilts, full of strutting, 
     preening birds. The sunlight broke on their grey breasts into small rainbows. His ears were lulled 
     by their crooning, his hands stretched up towards the favourite, a homing pigeon, a young plump
@@ -156,21 +157,26 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const popup = document.querySelector('.popup');
-      const closeButton = document.querySelector('.close');
-      const blurContainer = document.querySelector('.blurContainer');
-      const body = document.body;
+    document.addEventListener("DOMContentLoaded", function() {
+      const blurContainer = document.getElementById('blurContainer');
+      const popup = document.getElementById('popup');
+      const closePopupButton = document.getElementById('closePopup');
 
-      // Initially blur the blur-container
-      blurContainer.classList.add('blur');
-      body.style.overflow = 'hidden';
+      // Function to position the popup
+      function positionPopup() {
+        popup.style.top = `${window.innerHeight / 2}px`;
+        popup.style.left = `${window.innerWidth / 2}px`;
+      }
 
-      // Event listener to close the popup
-      closeButton.addEventListener('click', function() {
-        popup.classList.add('hidden');
+      // Initially position the popup
+      positionPopup();
+
+      // Update popup position on window resize
+      window.addEventListener('resize', positionPopup);
+
+      closePopupButton.addEventListener('click', function() {
         blurContainer.classList.remove('blur');
-        body.style.overflow = 'auto';
+        popup.style.display = 'none';
       });
     });
   </script>
