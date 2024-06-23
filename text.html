@@ -145,38 +145,36 @@
     cold shadow, and he saw the tears run shivering off her face.
     </article>
     <div id="done">
-      <p>Done reading?</p>
-      <a href="postest.html"><button>GO TO POST TEST</button></a>
+      <p>IF YOU ARE DONE READING, PLEASE CLICK ON THE BUTTON BELOW:</p>
+      <a href="postest.html"><button>GO TO QUESTIONNAIRE!</button></a>
     </div>
   </div>
 
-
+  
   <div class="popup">
-    <p>Explain what happens now</p>
-    <button class="close">Start reading!</button>
+    <p>You will now be presented with a short story.<br/>
+        Please, take your time to read it carefully.<br/> 
+        When you are done reading, click on the button "GO TO QUESTIONNAIRE", at the end of the page, to proceed to the last part of the experiment.<br/>
+        Thank you for your time and enjoy the story!</p>
+        <button class="close">START READING!</button>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const blurContainer = document.getElementById('blurContainer');
-      const popup = document.getElementById('popup');
-      const closePopupButton = document.getElementById('closePopup');
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.querySelector('.popup');
+      const closeButton = document.querySelector('.close');
+      const blurContainer = document.querySelector('.blurContainer');
+      const body = document.body;
 
-      // Function to position the popup
-      function positionPopup() {
-        popup.style.top = `${window.innerHeight / 2}px`;
-        popup.style.left = `${window.innerWidth / 2}px`;
-      }
+      // Initially blur the blur-container
+      blurContainer.classList.add('blur');
+      body.style.overflow = 'hidden';
 
-      // Initially position the popup
-      positionPopup();
-
-      // Update popup position on window resize
-      window.addEventListener('resize', positionPopup);
-
-      closePopupButton.addEventListener('click', function() {
+      // Event listener to close the popup
+      closeButton.addEventListener('click', function() {
+        popup.classList.add('hidden');
         blurContainer.classList.remove('blur');
-        popup.style.display = 'none';
+        body.style.overflow = 'auto';
       });
     });
   </script>
