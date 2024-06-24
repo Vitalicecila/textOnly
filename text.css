@@ -18,9 +18,7 @@ html, body {
     align-items: center;
   }
   iframe {
-    margin-top:4%;
-    border: none;
-    width: 150%;
+    width: 100%;
   }
   .popup {
     position: fixed;
@@ -85,21 +83,4 @@ html, body {
   }
   h2{
     margin-top: -1%;
-  }
-
-  #pretest {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #postest {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  iframe {
-  margin-top:4%;
-    border: none;
-    width: 150%;
   }
