@@ -7,16 +7,12 @@ html, body {
   .blurContainer.blur {
     filter: blur(5px);
   }
-  #pretest {
+  .test {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #postest {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   iframe {
     width: 100%;
   }
